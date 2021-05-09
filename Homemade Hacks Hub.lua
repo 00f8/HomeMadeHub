@@ -408,11 +408,27 @@
                                         Section:NewButton("Made By MadDexSkillz On Youtube", "Keeps You Updated", function()
                                             print("https://discord.com/invite/xfAquPEqUV")
                                         end)
+elseif game.PlaceId == 3101667897 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Speed Legends", "Synapse")
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+    MainSection:NewToggle("FarmGems", "Auto Collects Gems", function(v)
+        getgenv().FarmGems = v
+        while true do
+            if not getgenv().FarmGems then return end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Workspace.orbFolder.City.Gem.innerGem.position)
+                    wait(0.01)
+        end
+    end)
+
+    end
 
 
 
 
 
+ 
 
 
-                                    end
+
