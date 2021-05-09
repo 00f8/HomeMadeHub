@@ -270,6 +270,31 @@ elseif game.PlaceId == 3956818381 then
             wait(0.5)
         end
     end)
+
+elseif game.PlaceId == 4598019433 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Ninja Legends", "Synapse")
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+
+
+
+
+
+                        ----- Player ------
+
+                        local Player = Window:NewTab("Player")
+                        local PlayerSection = Player:NewSection("Player")
+                        PlayerSection:NewSlider("WalkSpeed", "Change This To How Fast Your Character Will Run", 200, 0, function(s) -- 200 (MaxValue) | 0 (MinValue)
+                        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+                    end)
+                    PlayerSection:NewSlider("JumpPower", "Change This To How High Your CHaracter Will Jump", 1000, 0, function(s) -- 1000 (MaxValue) | 0 (MinValue)
+                        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+                    
+                    end)
+
 end
 
 
