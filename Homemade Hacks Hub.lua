@@ -47,13 +47,7 @@
                     module["AutoFire"] = true
                 end
             end)
-                ----- Credits ------
-        
-                local Credits = Window:NewTab("Credits")
-                local CreditsSection = Credits:NewSection("Credits")
-               Section:NewButton("Made By MadDexSkillz On Youtube", "Keeps You Updated", function()
-               print("https://discord.com/invite/xfAquPEqUV")
-                end)
+
         
         
         
