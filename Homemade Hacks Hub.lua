@@ -253,7 +253,7 @@ elseif game.PlaceId == 3956818381 then
              
             local A_1 = "buyAllSwords"
             local A_2 = "Inner Peace Island"
-            local Event = game:GetService("Players").HomeMadeHub.ninjaEvent
+            local Event = game:GetService("Players").LocalPlayer.ninjaEvent
             Event:FireServer(A_1, A_2)
             wait(0.5)
         end
