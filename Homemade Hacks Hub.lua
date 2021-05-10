@@ -418,17 +418,36 @@ elseif game.PlaceId == 3101667897 then
         while true do
             if not getgenv().FarmGems then return end
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Workspace.orbFolder.City.Gem.innerGem.position)
-                    wait(0.01)
+                    wait(0.5)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,0,0)
+                    wait(0.5)
         end
     end)
-
+elseif game.PlaceId == 5942932659 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("WormFace", "Synapse")
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+    MainSection:NewToggle("Auto Collect", "Auto Collects Food", function(v)
+        getgenv().FarmGems = v
+        while true do
+            if not getgenv().FarmGems then return end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Workspace.Items.Gem.Part.position)
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,0,0)
+                    wait(0.1)
+        end
+    end)
     end
 
 
 
 
 
+
  
+
+    
 
 
 
